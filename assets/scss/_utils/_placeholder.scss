@@ -1,0 +1,55 @@
+// pour les scss reutilisable - permet au css de regrouper ave , les éléments qui utilise le placeholder
+// pour l'utiliser : @extend %flex-center
+
+%flex--center--row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex--center--column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex--row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+%flex--column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+%txt__style--title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    background-color: $color__txt--black;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.35);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+}
+
+%btn__style--purple--rounded {
+    padding: 15px 20px 15px 20px;
+    border-radius: 50px 50px 50px 50px;
+    color: $color__light-grey;
+    background: $color__primaire;
+    background-image: linear-gradient(170deg, $color__secondaire 0%, $color__primaire 48%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.25);
+
+}

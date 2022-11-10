@@ -1,0 +1,14 @@
+// nesting - pas plus de 3 imbrications
+
+@import "./_utils/variables";
+@import "./_utils/mixin";
+@import "./_utils/placeholder";
+@import "./_utils/keyframe";
+
+@import "components/btn.scss";
+
+@import "./normalise.scss";
+@import "layout/header.scss";
+@import "layout/mainLandingPage.scss";
+@import "layout/mainMenu.scss";
+@import "layout/footer.scss";

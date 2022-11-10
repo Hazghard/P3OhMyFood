@@ -1,0 +1,43 @@
+header {
+    @extend %flex--center--column;
+    width: 100%;
+}
+
+
+.header_logo {
+    height: 3.25rem;
+    padding: 10px 0 10px 0;
+
+    path {
+        fill: $color__txt--grey;
+    }
+}
+
+.header_location {
+    @extend %flex--row;
+    align-items: center;
+    height: 1.5rem;
+    width: 100%;
+    padding: 25px 0 25px 0;
+    gap: 1.25rem;
+
+    background-color: $color__light-grey;
+    box-shadow: inset rgba(0, 0, 0, 0.45) 0px 12px 20px -20px;
+
+    i {
+        flex: 1;
+        position: relative;
+        left: 110px;
+    }
+
+
+    input {
+        flex: 2;
+        border: none;
+        font-family: $police_texte;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $color__txt--black;
+        background-color: transparent;
+    }
+}

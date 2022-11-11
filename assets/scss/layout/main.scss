@@ -18,48 +18,47 @@ main {
 
 .section_presentation {
     grid-area: presentation;
-    @extend %flex--center--column;
+    @extend %flex__center--column;
     background-color: $color__grey-white;
-    padding: 50px 25px 50px 25px;
+    padding: 45px 10px 50px 10px;
     gap: 20px;
     text-align: center;
 
-    h1 {
+    & h1 {
         @extend %txt__style--title
     }
 
-    p {
+    & p {
         font-weight: 400;
         font-size: 1.15rem;
         letter-spacing: -0.5px;
         color: $color__txt--grey;
     }
 
-    a {
+    & a {
         @extend %btn__style--purple--rounded;
+        margin-top: 25px;
     }
 }
 
 .section_fonctionnement {
     grid-area: fonctionnement;
-
     @extend %flex--column;
-
     padding: 40px 25px 50px 25px;
     gap: 30px;
 
-    h2 {
+    & h2 {
         @extend %txt__style--title;
     }
 
 }
 
 .section_ul {
-    @extend %flex--center--column;
+    @extend %flex__center--column;
     gap: 25px;
     padding: 0px 20px 0px 30px;
 
-    li {
+    & li {
         @extend %flex--row;
         align-items: center;
         width: 100%;
@@ -69,7 +68,7 @@ main {
         box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 10px;
 
 
-        div {
+        & div {
             position: relative;
             right: 15px;
             padding: 5px 10px 5px 10px;
@@ -80,7 +79,7 @@ main {
             box-shadow: inset 10px 0px 10px 0px rgba(0, 0, 0, 0.3);
         }
 
-        i {
+        & i {
             padding-right: 15px;
             background-color: #7E7E7E;
             color: transparent;
@@ -90,7 +89,7 @@ main {
             background-clip: text;
         }
 
-        p {
+        & p {
             font-family: $police_texte;
             font-weight: 500;
             font-size: 1rem;
@@ -108,7 +107,7 @@ main {
     grid-area: restaurants;
     background-color: $color__grey-white;
 
-    h2 {
+    & h2 {
         @extend %txt__style--title;
     }
 

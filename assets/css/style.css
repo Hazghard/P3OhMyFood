@@ -1,3 +1,11 @@
+header .header_localisation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .section_ul, .section_presentation, header {
   display: flex;
   flex-direction: column;
@@ -6,7 +14,7 @@
   align-items: center;
 }
 
-.section_ul li, .header_location {
+.section_ul li {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -38,6 +46,10 @@
   background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 48%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.25);
+}
+.section_presentation a span {
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
 }
 
 * {
@@ -80,31 +92,26 @@ button {
 header {
   width: 100%;
 }
-
-.header_logo {
-  height: 3.25rem;
-  padding: 10px 0 10px 0;
+header .header_logo {
+  font-size: 2.25rem;
+  padding: 5px 0 5px 0;
+  font-family: "Shrikhand", Courier, monospace;
 }
-.header_logo path {
-  fill: #353535;
-}
-
-.header_location {
-  align-items: center;
-  height: 1.5rem;
+header .header_localisation {
   width: 100%;
-  padding: 25px 0 25px 0;
-  gap: 1.25rem;
+  padding: 15px 0 15px 0;
+  gap: 0.75rem;
   background-color: #EAEAEA;
+  background: linear-gradient(180deg, rgb(234, 234, 234) 0%, rgb(233, 233, 233) 100%);
   box-shadow: inset rgba(0, 0, 0, 0.45) 0px 12px 20px -20px;
 }
-.header_location i {
-  flex: 1;
-  position: relative;
-  left: 110px;
+header .header_localisation i {
+  display: flex;
+  justify-content: end;
+  flex-grow: 2;
 }
-.header_location input {
-  flex: 2;
+header .header_localisation input {
+  flex-grow: 0.9;
   border: none;
   font-family: "Roboto", Courier, monospace;
   font-weight: 500;
@@ -128,7 +135,7 @@ main {
 .section_presentation {
   grid-area: presentation;
   background-color: #F7F7F7;
-  padding: 50px 25px 50px 25px;
+  padding: 45px 10px 50px 10px;
   gap: 20px;
   text-align: center;
 }
@@ -138,6 +145,10 @@ main {
   letter-spacing: -0.5px;
   color: #353535;
 }
+.section_presentation a {
+  margin-top: 25px;
+}
+
 .section_fonctionnement {
   grid-area: fonctionnement;
   padding: 40px 25px 50px 25px;

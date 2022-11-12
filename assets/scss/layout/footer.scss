@@ -1,0 +1,22 @@
+footer {
+    @extend %flex--column;
+    width: 100%;
+    padding: 30px 30px 40px 30px;
+    background-color: $color__txt--grey;
+    color: $color__txt--white;
+    gap: 15px;
+
+    & .footer_logo {
+        font-size: 1.25rem;
+        font-family: $police_logo_titres;
+        padding-bottom: 15px;
+    }
+
+    & a {
+        @extend %flex--row;
+
+        & i {
+            width: 30px;
+        }
+    }
+}

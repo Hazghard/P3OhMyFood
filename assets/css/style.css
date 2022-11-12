@@ -14,13 +14,13 @@ header .header_localisation {
   align-items: center;
 }
 
-.card_wrapper a .card_wrapper_legende, .section_ul li {
+footer a, .card_wrapper a .card_wrapper_legende, .section_ul li {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
-.card_wrapper a, .section_restaurants, .section_fonctionnement {
+footer, .card_wrapper a, .section_restaurants, .section_fonctionnement {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -245,4 +245,20 @@ header .header_localisation input {
 .card_wrapper a .card_wrapper_legende i {
   font-size: 1.5rem;
   color: #000000;
+}
+
+footer {
+  width: 100%;
+  padding: 30px 30px 40px 30px;
+  background-color: #353535;
+  color: #FFFFFF;
+  gap: 15px;
+}
+footer .footer_logo {
+  font-size: 1.25rem;
+  font-family: "Shrikhand", Courier, monospace;
+  padding-bottom: 15px;
+}
+footer a i {
+  width: 30px;
 }

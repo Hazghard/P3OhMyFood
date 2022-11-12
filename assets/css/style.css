@@ -1,3 +1,11 @@
+header .header_localisation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .section_ul, .section_presentation, header {
   display: flex;
   flex-direction: column;
@@ -6,13 +14,13 @@
   align-items: center;
 }
 
-.section_ul li, .header_location {
+.card_wrapper a .card_wrapper_legende, .section_ul li {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
-.section_fonctionnement {
+.card_wrapper a, .section_restaurants, .section_fonctionnement {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -38,6 +46,18 @@
   background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 48%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.25);
+}
+.section_presentation a span {
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+}
+
+.section_ul li p, .section_ul li i {
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
 
 * {
@@ -80,32 +100,28 @@ button {
 header {
   width: 100%;
 }
-
-.header_logo {
-  height: 3.25rem;
-  padding: 10px 0 10px 0;
+header .header_logo {
+  font-size: 2.25rem;
+  padding: 5px 0 5px 0;
+  font-family: "Shrikhand", Courier, monospace;
 }
-.header_logo path {
-  fill: #353535;
-}
-
-.header_location {
-  align-items: center;
-  height: 1.5rem;
+header .header_localisation {
   width: 100%;
-  padding: 25px 0 25px 0;
-  gap: 1.25rem;
+  padding: 15px 0 15px 0;
+  gap: 0.75rem;
   background-color: #EAEAEA;
+  background: linear-gradient(180deg, rgb(234, 234, 234) 0%, rgb(233, 233, 233) 100%);
   box-shadow: inset rgba(0, 0, 0, 0.45) 0px 12px 20px -20px;
 }
-.header_location i {
-  flex: 1;
-  position: relative;
-  left: 110px;
+header .header_localisation i {
+  display: flex;
+  justify-content: end;
+  flex-grow: 2;
 }
-.header_location input {
-  flex: 2;
+header .header_localisation input {
+  flex-grow: 0.9;
   border: none;
+  outline: none;
   font-family: "Roboto", Courier, monospace;
   font-weight: 500;
   font-size: 1rem;
@@ -113,22 +129,24 @@ header {
   background-color: transparent;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-main {
+.landingPage__main {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "presentation" "fonctionnement" "restaurants";
 }
 
+.menuPage__main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "section__photo" "section__menu";
+}
+
 .section_presentation {
   grid-area: presentation;
   background-color: #F7F7F7;
-  padding: 50px 25px 50px 25px;
+  padding: 45px 10px 50px 10px;
   gap: 20px;
   text-align: center;
 }
@@ -138,6 +156,10 @@ main {
   letter-spacing: -0.5px;
   color: #353535;
 }
+.section_presentation a {
+  margin-top: 25px;
+}
+
 .section_fonctionnement {
   grid-area: fonctionnement;
   padding: 40px 25px 50px 25px;
@@ -168,25 +190,59 @@ main {
 .section_ul li i {
   padding-right: 15px;
   background-color: #7E7E7E;
-  color: transparent;
-  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
 }
 .section_ul li p {
   font-family: "Roboto", Courier, monospace;
   font-weight: 500;
   font-size: 1rem;
   background-color: #000000;
-  color: transparent;
-  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
 }
 
 .section_restaurants {
   grid-area: restaurants;
   background-color: #F7F7F7;
+  padding: 40px 25px 50px 25px;
+}
+.cards_ul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.card_wrapper span {
+  position: relative;
+  top: 16%;
+  left: 68%;
+  width: max-content;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #99E2D0;
+  color: #008766;
+  font-weight: 700;
+}
+.card_wrapper a {
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.card_wrapper a .card_wrapper_photo img {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.card_wrapper a .card_wrapper_legende {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 15px 15px;
+}
+.card_wrapper a .card_wrapper_legende div {
+  color: #000000;
+}
+.card_wrapper a .card_wrapper_legende i {
+  font-size: 1.5rem;
+  color: #000000;
 }

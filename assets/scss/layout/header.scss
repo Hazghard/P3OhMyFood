@@ -1,43 +1,38 @@
 header {
-    @extend %flex--center--column;
+    @extend %flex__center--column;
     width: 100%;
-}
 
-
-.header_logo {
-    height: 3.25rem;
-    padding: 10px 0 10px 0;
-
-    path {
-        fill: $color__txt--grey;
-    }
-}
-
-.header_location {
-    @extend %flex--row;
-    align-items: center;
-    height: 1.5rem;
-    width: 100%;
-    padding: 25px 0 25px 0;
-    gap: 1.25rem;
-
-    background-color: $color__light-grey;
-    box-shadow: inset rgba(0, 0, 0, 0.45) 0px 12px 20px -20px;
-
-    i {
-        flex: 1;
-        position: relative;
-        left: 110px;
+    & .header_logo {
+        font-size: 2.25rem;
+        padding: 5px 0 5px 0;
+        font-family: $police_logo_titres;
     }
 
+    & .header_localisation {
+        @extend %flex__center--row;
+        width: 100%;
+        padding: 15px 0 15px 0;
+        gap: 0.75rem;
+        background-color: $color__light-grey;
+        background: linear-gradient(180deg, rgba(234, 234, 234, 1) 0%, rgba(233, 233, 233, 1) 100%);
+        box-shadow: inset rgba(0, 0, 0, 0.45) 0px 12px 20px -20px;
 
-    input {
-        flex: 2;
-        border: none;
-        font-family: $police_texte;
-        font-weight: 500;
-        font-size: 1rem;
-        color: $color__txt--black;
-        background-color: transparent;
+        & i {
+            display: flex;
+            justify-content: end;
+            flex-grow: 2;
+        }
+
+        & input {
+            flex-grow: 0.9;
+            border: none;
+            outline: none;
+            font-family: $police_texte;
+            font-weight: 500;
+            font-size: 1rem;
+            color: $color__txt--black;
+            background-color: transparent;
+        }
     }
+
 }

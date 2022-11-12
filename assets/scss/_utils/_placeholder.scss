@@ -1,7 +1,7 @@
 // pour les scss reutilisable - permet au css de regrouper ave , les éléments qui utilise le placeholder
 // pour l'utiliser : @extend %flex-center
 
-%flex--center--row {
+%flex__center--row {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-%flex--center--column {
+%flex__center--column {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -39,7 +39,6 @@
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-
 }
 
 %btn__style--purple--rounded {
@@ -49,7 +48,19 @@
     background: $color__primaire;
     background-image: linear-gradient(170deg, $color__secondaire 0%, $color__primaire 48%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
     text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.25);
 
+    & span {
+        letter-spacing: -0.5px;
+        color: $color__txt--white;
+
+    }
+}
+
+%txt--innershadow {
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
 }

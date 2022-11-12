@@ -39,7 +39,6 @@
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-
 }
 
 %btn__style--purple--rounded {
@@ -56,4 +55,12 @@
         color: $color__txt--white;
 
     }
+}
+
+%txt--innershadow {
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
 }

@@ -14,13 +14,13 @@ header .header_localisation {
   align-items: center;
 }
 
-.section_ul li {
+.card_wrapper a .card_wrapper_legende, .section_ul li {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
-.section_fonctionnement {
+.card_wrapper a, .section_restaurants, .section_fonctionnement {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -50,6 +50,14 @@ header .header_localisation {
 .section_presentation a span {
   letter-spacing: -0.5px;
   color: #FFFFFF;
+}
+
+.section_ul li p, .section_ul li i {
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
 
 * {
@@ -113,6 +121,7 @@ header .header_localisation i {
 header .header_localisation input {
   flex-grow: 0.9;
   border: none;
+  outline: none;
   font-family: "Roboto", Courier, monospace;
   font-weight: 500;
   font-size: 1rem;
@@ -120,16 +129,18 @@ header .header_localisation input {
   background-color: transparent;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-main {
+.landingPage__main {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "presentation" "fonctionnement" "restaurants";
+}
+
+.menuPage__main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "section__photo" "section__menu";
 }
 
 .section_presentation {
@@ -179,25 +190,59 @@ main {
 .section_ul li i {
   padding-right: 15px;
   background-color: #7E7E7E;
-  color: transparent;
-  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
 }
 .section_ul li p {
   font-family: "Roboto", Courier, monospace;
   font-weight: 500;
   font-size: 1rem;
   background-color: #000000;
-  color: transparent;
-  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
 }
 
 .section_restaurants {
   grid-area: restaurants;
   background-color: #F7F7F7;
+  padding: 40px 25px 50px 25px;
+}
+.cards_ul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.card_wrapper span {
+  position: relative;
+  top: 16%;
+  left: 68%;
+  width: max-content;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #99E2D0;
+  color: #008766;
+  font-weight: 700;
+}
+.card_wrapper a {
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.card_wrapper a .card_wrapper_photo img {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.card_wrapper a .card_wrapper_legende {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 15px 15px;
+}
+.card_wrapper a .card_wrapper_legende div {
+  color: #000000;
+}
+.card_wrapper a .card_wrapper_legende i {
+  font-size: 1.5rem;
+  color: #000000;
 }

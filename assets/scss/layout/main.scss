@@ -1,19 +1,26 @@
-img {
-    // POUR DEBUG SITE POUR QUE LES IMAGES NE PRENNENT QUE LA LARGEUR DU VIEWPORT
-    // A ENLEVER APRES
-    height: auto;
-    max-width: 100%;
-}
-
-main {
+//Landing page Grid layout
+.landingPage__main {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
         "presentation"
         "fonctionnement"
-        "restaurants";
+        "restaurants"
+    ;
 }
+
+//Menu GHrid layout
+.menuPage__main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "section__photo"
+        "section__menu"
+    ;
+}
+
 
 
 .section_presentation {
@@ -82,11 +89,7 @@ main {
         & i {
             padding-right: 15px;
             background-color: #7E7E7E;
-            color: transparent;
-            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
+            @extend %txt--innershadow;
         }
 
         & p {
@@ -94,11 +97,7 @@ main {
             font-weight: 500;
             font-size: 1rem;
             background-color: $color__txt--black;
-            color: transparent;
-            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
+            @extend %txt--innershadow;
         }
     }
 }
@@ -106,10 +105,67 @@ main {
 .section_restaurants {
     grid-area: restaurants;
     background-color: $color__grey-white;
+    padding: 40px 25px 50px 25px;
+
+    @extend %flex--column;
 
     & h2 {
         @extend %txt__style--title;
     }
+}
+
+.cards_ul {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card_wrapper {
+    display: flex;
+    flex-direction: column;
+
+    & span {
+        position: relative;
+        top: 16%;
+        left: 68%;
+        width: max-content;
+        padding: 8px 15px;
+        border-radius: 5px;
+        background-color: $color__tertiaire;
+        color: $color__txt--nouveau;
+        font-weight: 700;
+    }
+
+    & a {
+        @extend %flex--column;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
 
+        & .card_wrapper_photo {
+
+            & img {
+                height: 200px;
+                width: 100%;
+                background-size: cover;
+                object-fit: cover;
+                border-radius: 20px 20px 0px 0px;
+            }
+        }
+
+        & .card_wrapper_legende {
+            @extend %flex--row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px 15px 15px;
+
+            & div {
+                color: $color__txt--black;
+            }
+
+            & i {
+                font-size: 1.5rem;
+                color: $color__txt--black;
+            }
+        }
+    }
 }

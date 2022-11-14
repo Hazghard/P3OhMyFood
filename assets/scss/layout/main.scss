@@ -98,7 +98,7 @@
 .section_ul {
     @extend %flex__center--column;
     gap: 25px;
-    padding: 0px 20px 0px 30px;
+    padding: 0px 20px 0px 20px;
 
     & li {
         @extend %flex--row;
@@ -200,22 +200,30 @@
             & div {
                 color: $color__txt--black;
             }
+        }
+    }
 
-            & i {
-                font-size: 1.5rem;
-                color: transparent;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: $color__txt--black;
+    & .btn_favoris {
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+        border: none;
 
-                &:hover {
-                    // animation: all 1s ease-in-out;
-                    color: #df6fdc;
-                    color: -webkit-linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
-                    color: linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
-                    -webkit-text-stroke-width: 0px;
-                    text-shadow: 2px -2px 6px rgba(0, 0, 0, 0.30);
-                }
+        & i {
+            font-size: 1.5rem;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: $color__txt--black;
+
+            &:hover {
+                // animation: all 1s ease-in-out;
+                color: #df6fdc;
+                color: -webkit-linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
+                color: linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
+                -webkit-text-stroke-width: 0px;
             }
         }
+
+
     }
 }

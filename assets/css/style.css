@@ -176,7 +176,7 @@ header .header_logo {
 }
 .section_ul {
   gap: 25px;
-  padding: 0px 20px 0px 30px;
+  padding: 0px 20px 0px 20px;
 }
 .section_ul li {
   align-items: center;
@@ -255,18 +255,23 @@ header .header_logo {
 .card_wrapper a .card_wrapper_legende div {
   color: #000000;
 }
-.card_wrapper a .card_wrapper_legende i {
+.card_wrapper .btn_favoris {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  border: none;
+}
+.card_wrapper .btn_favoris i {
   font-size: 1.5rem;
   color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000000;
 }
-.card_wrapper a .card_wrapper_legende i:hover {
+.card_wrapper .btn_favoris i:hover {
   color: #df6fdc;
   color: -webkit-linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
   color: linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
   -webkit-text-stroke-width: 0px;
-  text-shadow: 2px -2px 6px rgba(0, 0, 0, 0.3);
 }
 
 footer {

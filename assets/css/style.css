@@ -275,7 +275,7 @@ header .header_logo {
 }
 
 footer {
-  width: 100%;
+  width: auto;
   padding: 30px 30px 40px 30px;
   background-color: #353535;
   color: #FFFFFF;
@@ -285,6 +285,10 @@ footer .footer_logo {
   font-size: 1.25rem;
   font-family: "Shrikhand", Courier, monospace;
   padding-bottom: 15px;
+}
+footer a {
+  width: fit-content;
+  color: #FFFFFF;
 }
 footer a i {
   width: 30px;

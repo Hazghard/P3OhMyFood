@@ -1,2 +1,31 @@
 // pour les fonctions scss - les mixins s'utilisent avec des variables (sino non utilise un placeholder)
 // utiliser : @include nom-mixin(param1 param2, paramx); pour appeler la mixin
+
+//Media queries : 
+// Nous avons convenu avec le designer UI d’utiliser 992 px et 768 px :
+// ● >=992 px pour les écrans d’ordinateurs ;
+// ● >=768 px pour les tablettes ;
+// ● et tout ce qui est en dessous de 768 pour les téléphones portables.
+
+
+
+/* Telephone en mode paysage à tablettes en portrait */
+@mixin sm {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+/* tablettes en portrait à paysage et desktop */
+@mixin md {
+    @media (min-width: 768px) and (max-width: 979px) {
+        @content;
+    }
+}
+
+/* desktop large */
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}

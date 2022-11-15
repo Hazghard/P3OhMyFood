@@ -1,13 +1,15 @@
 //Landing page Grid layout
-.landingPage__main {
+#landingPage__main {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
+        "localisation"
         "presentation"
         "fonctionnement"
         "restaurants"
     ;
+
 }
 
 //Menu GHrid layout
@@ -22,6 +24,40 @@
 }
 
 
+.section_localisation {
+    grid-area: localisation;
+    width: 100%;
+    padding: 15px 0 15px 0;
+    gap: 0.75rem;
+    background-color: $color__light-grey;
+    background: linear-gradient(180deg, rgba(234, 234, 234, 1) 0%, rgba(233, 233, 233, 1) 100%);
+    box-shadow: inset rgba(0, 0, 0, 0.45) 0px 12px 20px -20px;
+
+    & span {
+        @extend %flex--row;
+        align-items: flex-start;
+        padding-left: calc(50% - 90px); //penser à changer les 90px si width de input change
+    }
+
+    & span input {
+        width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: none;
+        outline: none;
+        font-family: $police_texte;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $color__txt--black;
+        background-color: transparent;
+    }
+
+    & span::before {
+        content: "\f3c5";
+        font: var(--fa-font-solid);
+        padding-right: 10px;
+    }
+}
 
 .section_presentation {
     grid-area: presentation;
@@ -63,7 +99,14 @@
 .section_ul {
     @extend %flex__center--column;
     gap: 25px;
-    padding: 0px 20px 0px 30px;
+    padding: 0px 20px 0px 20px;
+
+    @include tablettes {
+        flex-direction: row;
+        padding: 0;
+        gap: 30px;
+
+    }
 
     & li {
         @extend %flex--row;
@@ -73,6 +116,11 @@
         background-color: $color__grey-white;
         border-radius: 25px 25px 25px 25px;
         box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 10px;
+
+        @include tablettes {
+            padding: 10px 0px 10px 0px;
+            margin: 0px 15px 0px 15px;
+        }
 
 
         & div {
@@ -87,9 +135,15 @@
         }
 
         & i {
-            padding-right: 15px;
+            padding-left: 10px;
+            padding-right: 25px;
             background-color: #7E7E7E;
             @extend %txt--innershadow;
+
+            @include tablettes {
+                padding-left: 0;
+                padding-right: 15px;
+            }
         }
 
         & p {
@@ -98,6 +152,11 @@
             font-size: 1rem;
             background-color: $color__txt--black;
             @extend %txt--innershadow;
+
+            @include tablettes {
+                padding-right: 15px;
+                text-align: center;
+            }
         }
     }
 }
@@ -106,6 +165,7 @@
     grid-area: restaurants;
     background-color: $color__grey-white;
     padding: 40px 25px 50px 25px;
+    gap: 30px;
 
     @extend %flex--column;
 
@@ -117,18 +177,26 @@
 .cards_ul {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 50px;
+
+    @include tablettes {
+        grid-template-columns: 1fr 1fr;
+        padding: 0px 15px 0px 15px;
+
+    }
 }
 
 .card_wrapper {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     & span {
-        position: relative;
-        top: 16%;
-        left: 68%;
+        position: absolute;
+        top: 15px;
+        right: 15px;
         width: max-content;
-        padding: 8px 15px;
+        padding: 6px 12px;
         border-radius: 5px;
         background-color: $color__tertiaire;
         color: $color__txt--nouveau;
@@ -144,7 +212,7 @@
         & .card_wrapper_photo {
 
             & img {
-                height: 200px;
+                height: 170px;
                 width: 100%;
                 background-size: cover;
                 object-fit: cover;
@@ -161,11 +229,30 @@
             & div {
                 color: $color__txt--black;
             }
+        }
+    }
 
-            & i {
-                font-size: 1.5rem;
-                color: $color__txt--black;
+    & .btn_favoris {
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+        border: none;
+
+        & i {
+            font-size: 1.5rem;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: $color__txt--black;
+
+            &:hover {
+                // animation: all 1s ease-in-out;
+                color: #df6fdc;
+                color: -webkit-linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
+                color: linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
+                -webkit-text-stroke-width: 0px;
             }
         }
+
+
     }
 }

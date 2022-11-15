@@ -1,2 +1,17 @@
 // pour les fonctions scss - les mixins s'utilisent avec des variables (sino non utilise un placeholder)
 // utiliser : @include nom-mixin(param1 param2, paramx); pour appeler la mixin
+
+
+/* tablettes */
+@mixin tablettes {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+/* pc */
+@mixin pc {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}

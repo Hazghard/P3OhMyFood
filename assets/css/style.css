@@ -1,7 +1,5 @@
-@charset "UTF-8";
-/* Telephone en mode paysage à tablettes en portrait */
-/* tablettes en portrait à paysage et desktop */
-/* desktop large */
+/* tablettes */
+/* pc */
 .section_ul, .section_presentation, header {
   display: flex;
   flex-direction: column;
@@ -178,6 +176,13 @@ header .header_logo {
   gap: 25px;
   padding: 0px 20px 0px 20px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section_ul {
+    flex-direction: row;
+    padding: 0;
+    gap: 30px;
+  }
+}
 .section_ul li {
   align-items: center;
   width: 100%;
@@ -185,6 +190,12 @@ header .header_logo {
   background-color: #F7F7F7;
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section_ul li {
+    padding: 10px 0px 10px 0px;
+    margin: 0px 15px 0px 15px;
+  }
 }
 .section_ul li div {
   position: relative;
@@ -201,11 +212,23 @@ header .header_logo {
   padding-right: 25px;
   background-color: #7E7E7E;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section_ul li i {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+}
 .section_ul li p {
   font-family: "Roboto", Courier, monospace;
   font-weight: 500;
   font-size: 1rem;
   background-color: #000000;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section_ul li p {
+    padding-right: 15px;
+    text-align: center;
+  }
 }
 
 .section_restaurants {
@@ -218,6 +241,12 @@ header .header_logo {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cards_ul {
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 15px 0px 15px;
+  }
 }
 
 .card_wrapper {

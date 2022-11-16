@@ -21,4 +21,9 @@ footer {
             width: 30px;
         }
     }
+
+    @include pc-wide {
+        justify-content: center;
+        align-items: center;
+    }
 }

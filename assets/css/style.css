@@ -1,5 +1,12 @@
 /* tablettes */
 /* pc */
+/* pc > max-width */
+body {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section_ul, .section_presentation, header {
   display: flex;
   flex-direction: column;
@@ -149,6 +156,12 @@ header .header_logo {
   font: var(--fa-font-solid);
   padding-right: 10px;
 }
+@media (min-width: 1401px) {
+  .section_localisation {
+    background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, rgb(234, 234, 234) 50%, rgba(234, 234, 234, 0) 100%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 20px -20px;
+  }
+}
 
 .section_presentation {
   grid-area: presentation;
@@ -166,17 +179,30 @@ header .header_logo {
 .section_presentation a {
   margin-top: 25px;
 }
+@media (min-width: 1401px) {
+  .section_presentation {
+    background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, #F7F7F7 40%, #F7F7F7 60%, rgba(234, 234, 234, 0) 100%);
+  }
+}
 
 .section_fonctionnement {
   grid-area: fonctionnement;
   padding: 40px 25px 50px 25px;
   gap: 30px;
 }
+@media (min-width: 1401px) {
+  .section_fonctionnement {
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 80px;
+  }
+}
+
 .section_ul {
   gap: 25px;
   padding: 0px 20px 0px 20px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .section_ul {
     flex-direction: row;
     padding: 0;
@@ -190,11 +216,23 @@ header .header_logo {
   background-color: #F7F7F7;
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+  transition: all 0.4s ease-in-out;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+.section_ul li:hover {
+  background-color: #f2eafb;
+}
+.section_ul li:hover i {
+  background-color: #9356DC;
+}
+@media (min-width: 768px) {
   .section_ul li {
     padding: 10px 0px 10px 0px;
     margin: 0px 15px 0px 15px;
+  }
+}
+@media (min-width: 1025px) {
+  .section_ul li {
+    width: auto;
   }
 }
 .section_ul li div {
@@ -211,11 +249,19 @@ header .header_logo {
   padding-left: 10px;
   padding-right: 25px;
   background-color: #7E7E7E;
+  transition: all 0.4s ease-in-out;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .section_ul li i {
     padding-left: 0;
     padding-right: 15px;
+  }
+}
+@media (min-width: 1025px) {
+  .section_ul li i {
+    display: flex;
+    justify-content: center;
+    padding: 0px 15px 0px 0px;
   }
 }
 .section_ul li p {
@@ -224,10 +270,15 @@ header .header_logo {
   font-size: 1rem;
   background-color: #000000;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .section_ul li p {
     padding-right: 15px;
     text-align: center;
+  }
+}
+@media (min-width: 1025px) {
+  .section_ul li p {
+    padding: 0px 30px 0px 0px;
   }
 }
 
@@ -237,14 +288,28 @@ header .header_logo {
   padding: 40px 25px 50px 25px;
   gap: 30px;
 }
+@media (min-width: 1401px) {
+  .section_restaurants {
+    align-items: center;
+    background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, #F7F7F7 40%, #F7F7F7 60%, rgba(234, 234, 234, 0) 100%);
+  }
+}
+
 .cards_ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .cards_ul {
+    width: 100%;
     grid-template-columns: 1fr 1fr;
+    padding: 0px 15px 0px 15px;
+  }
+}
+@media (min-width: 1025px) {
+  .cards_ul {
+    width: 70%;
     padding: 0px 15px 0px 15px;
   }
 }
@@ -295,6 +360,7 @@ header .header_logo {
   color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000000;
+  transition: all 0.5s ease-in-out;
 }
 .card_wrapper .btn_favoris i:hover {
   color: #df6fdc;
@@ -321,4 +387,10 @@ footer a {
 }
 footer a i {
   width: 30px;
+}
+@media (min-width: 1401px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
 }

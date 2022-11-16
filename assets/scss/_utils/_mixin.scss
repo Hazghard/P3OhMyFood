@@ -4,7 +4,8 @@
 
 /* tablettes */
 @mixin tablettes {
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) {
+        // and (max-width: 1024px) 
         @content;
     }
 }
@@ -12,6 +13,14 @@
 /* pc */
 @mixin pc {
     @media (min-width: 1025px) {
+        // and (max-width: $screen_max_width)
+        @content;
+    }
+}
+
+/* pc > max-width */
+@mixin pc-wide {
+    @media (min-width: calc($screen_max_width + 1px)) {
         @content;
     }
 }

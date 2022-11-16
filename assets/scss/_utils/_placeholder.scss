@@ -1,6 +1,12 @@
 // pour les scss reutilisable - permet au css de regrouper ave , les éléments qui utilise le placeholder
 // pour l'utiliser : @extend %flex-center
 
+%screen_max--center {
+    max-width: $screen_max_width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 %flex__center--row {
     display: flex;
     flex-direction: row;

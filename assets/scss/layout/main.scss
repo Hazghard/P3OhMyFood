@@ -57,6 +57,11 @@
         font: var(--fa-font-solid);
         padding-right: 10px;
     }
+
+    @include pc {
+        background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, rgba(234, 234, 234, 1) 50%, rgba(234, 234, 234, 0) 100%);
+        box-shadow: rgba(0, 0, 0, 0.10) 0px 25px 20px -20px;
+    }
 }
 
 .section_presentation {
@@ -81,6 +86,18 @@
     & a {
         @extend %btn__style--purple--rounded;
         margin-top: 25px;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+            transform: translate(0, -5px);
+            background-image: linear-gradient(170deg, $color__secondaire 20%, $color__primaire 68%);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 24px 28px, rgba(0, 0, 0, 0.22) 0px 20px 10px;
+        }
+    }
+
+    @include pc {
+        background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, $color__grey-white 40%, $color__grey-white 60%, rgba(234, 234, 234, 0) 100%);
     }
 }
 
@@ -94,6 +111,12 @@
         @extend %txt__style--title;
     }
 
+    @include pc {
+        align-items: center;
+        gap: 50px;
+        padding-bottom: 80px;
+    }
+
 }
 
 .section_ul {
@@ -105,7 +128,6 @@
         flex-direction: row;
         padding: 0;
         gap: 30px;
-
     }
 
     & li {
@@ -116,10 +138,26 @@
         background-color: $color__grey-white;
         border-radius: 25px 25px 25px 25px;
         box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 10px;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+            background-color: lighten($color__primaire, $amount: 35);
+            transform: scale(1.05);
+            box-shadow: rgba(0, 0, 0, 0.30) 0px 20px 20px;
+
+
+            & i {
+                background-color: $color__primaire;
+            }
+        }
 
         @include tablettes {
             padding: 10px 0px 10px 0px;
             margin: 0px 15px 0px 15px;
+        }
+
+        @include pc {
+            width: auto;
         }
 
 
@@ -139,10 +177,18 @@
             padding-right: 25px;
             background-color: #7E7E7E;
             @extend %txt--innershadow;
+            transition: all 0.4s ease-in-out;
+
 
             @include tablettes {
                 padding-left: 0;
                 padding-right: 15px;
+            }
+
+            @include pc {
+                display: flex;
+                justify-content: center;
+                padding: 0px 15px 0px 0px;
             }
         }
 
@@ -156,6 +202,10 @@
             @include tablettes {
                 padding-right: 15px;
                 text-align: center;
+            }
+
+            @include pc {
+                padding: 0px 30px 0px 0px;
             }
         }
     }
@@ -172,6 +222,11 @@
     & h2 {
         @extend %txt__style--title;
     }
+
+    @include pc {
+        align-items: center;
+        background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, $color__grey-white 40%, $color__grey-white 60%, rgba(234, 234, 234, 0) 100%);
+    }
 }
 
 .cards_ul {
@@ -180,9 +235,14 @@
     gap: 50px;
 
     @include tablettes {
+        width: 100%;
         grid-template-columns: 1fr 1fr;
         padding: 0px 15px 0px 15px;
+    }
 
+    @include pc {
+        width: 70%;
+        padding: 0px 15px 0px 15px;
     }
 }
 
@@ -190,6 +250,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: all 0.25s ease-in-out;
 
     & span {
         position: absolute;
@@ -206,8 +269,6 @@
     & a {
         @extend %flex--column;
         border-radius: 20px 20px 20px 20px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
 
         & .card_wrapper_photo {
 
@@ -230,6 +291,7 @@
                 color: $color__txt--black;
             }
         }
+
     }
 
     & .btn_favoris {
@@ -243,6 +305,7 @@
             color: transparent;
             -webkit-text-stroke-width: 2px;
             -webkit-text-stroke-color: $color__txt--black;
+            transition: all 0.5s ease-in-out;
 
             &:hover {
                 // animation: all 1s ease-in-out;
@@ -252,7 +315,10 @@
                 -webkit-text-stroke-width: 0px;
             }
         }
+    }
 
-
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 28px, rgba(0, 0, 0, 0.22) 0px 25px 10px;
     }
 }

@@ -91,7 +91,7 @@
         &:hover {
             transform: scale(1.05);
             transform: translate(0, -5px);
-            background-image: linear-gradient(170deg, $color__secondaire 20%, $color__primaire 68%);
+            background-position: 30%;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 24px 28px, rgba(0, 0, 0, 0.22) 0px 20px 10px;
         }
     }
@@ -299,20 +299,26 @@
         bottom: 25px;
         right: 20px;
         border: none;
+        color: transparent;
+        background-color: transparent;
 
         & i {
             font-size: 1.5rem;
             color: transparent;
             -webkit-text-stroke-width: 2px;
             -webkit-text-stroke-color: $color__txt--black;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.25s;
 
             &:hover {
-                // animation: all 1s ease-in-out;
-                color: #df6fdc;
-                color: -webkit-linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
-                color: linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
-                -webkit-text-stroke-width: 0px;
+                background-image: #df6fdc;
+                background-image: -webkit-linear-gradient(39deg, $color__secondaire 0%, $color__primaire 100%);
+                background-image: linear-gradient(39deg, $color__secondaire 0%, $color__primaire 100%);
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: white;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                transform: scale(1.1);
             }
         }
     }

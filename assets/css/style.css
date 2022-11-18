@@ -41,10 +41,11 @@ footer, .card_wrapper a, .section_restaurants, .section_fonctionnement {
 
 .section_presentation a {
   padding: 15px 20px 15px 20px;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 50px;
   color: #EAEAEA;
-  background: #9356DC;
-  background-image: linear-gradient(170deg, #FF79DA 0%, #9356DC 48%);
+  background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 100%);
+  background-size: 200%;
+  background-position: 80%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.25);
 }
@@ -59,6 +60,22 @@ footer, .card_wrapper a, .section_restaurants, .section_fonctionnement {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
+}
+
+.btn {
+  padding: 1em 1.5em;
+  color: #eee;
+  transition: 250ms;
+}
+.btn--gradient {
+  background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 100%);
+}
+.btn--radius {
+  border-radius: 2em;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -183,7 +200,7 @@ header .header_logo {
 .section_presentation a:hover {
   transform: scale(1.05);
   transform: translate(0, -5px);
-  background-image: linear-gradient(170deg, #FF79DA 20%, #9356DC 68%);
+  background-position: 30%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 24px 28px, rgba(0, 0, 0, 0.22) 0px 20px 10px;
 }
 @media (min-width: 1025px) {
@@ -365,19 +382,26 @@ header .header_logo {
   bottom: 25px;
   right: 20px;
   border: none;
+  color: transparent;
+  background-color: transparent;
 }
 .card_wrapper .btn_favoris i {
   font-size: 1.5rem;
   color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000000;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s;
 }
 .card_wrapper .btn_favoris i:hover {
-  color: #df6fdc;
-  color: -webkit-linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
-  color: linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
-  -webkit-text-stroke-width: 0px;
+  background-image: #df6fdc;
+  background-image: -webkit-linear-gradient(39deg, #FF79DA 0%, #9356DC 100%);
+  background-image: linear-gradient(39deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  transform: scale(1.1);
 }
 .card_wrapper:hover {
   transform: scale(1.05);

@@ -1,0 +1,22 @@
+.btn {
+
+    padding: 1em 1.5em;
+    color: #eee;
+    transition: 250ms;
+
+    &--gradient {
+
+        background-image: radial-gradient(100% 50% at 20% 10%,
+                $color__secondaire 0%,
+                $color__primaire 100%);
+    }
+
+    &--radius {
+        border-radius: 2em;
+    }
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+    }
+}

@@ -49,10 +49,13 @@
 
 %btn__style--purple--rounded {
     padding: 15px 20px 15px 20px;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 50px;
     color: $color__light-grey;
-    background: $color__primaire;
-    background-image: linear-gradient(170deg, $color__secondaire 0%, $color__primaire 48%);
+    background-image: radial-gradient(100% 50% at 20% 10%,
+            $color__secondaire 0%,
+            $color__primaire 100%);
+    background-size: 200%;
+    background-position: 80%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.25);
 

@@ -217,7 +217,7 @@ footer, .menu__container--entrees ul,
   z-index: 9000;
   visibility: hidden;
   opacity: 0;
-  -webkit-animation: fade-out 1s ease-out both;
+  -webkit-animation: modale__visibility 1s ease-out both;
   animation: modale__visibility 1s ease-out both;
   animation-delay: 2s;
 }

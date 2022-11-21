@@ -13,7 +13,7 @@
     // PRELOADER VISIBILITY
     visibility: hidden;
     opacity: 0;
-    -webkit-animation: fade-out $preloader__fadeout ease-out both;
+    -webkit-animation: modale__visibility $preloader__fadeout ease-out both;
     animation: modale__visibility $preloader__fadeout ease-out both;
     animation-delay: calc($preloader__timer - $preloader__fadeout);
 

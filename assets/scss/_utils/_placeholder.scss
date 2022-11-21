@@ -48,11 +48,17 @@
 }
 
 %btn__style--purple--rounded {
+    width: 200px;
     padding: 15px 20px 15px 20px;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
     color: $color__light-grey;
-    background: $color__primaire;
-    background-image: linear-gradient(170deg, $color__secondaire 0%, $color__primaire 48%);
+    background-image: radial-gradient(100% 50% at 20% 10%,
+            $color__secondaire 0%,
+            $color__primaire 100%);
+    background-size: 200%;
+    background-position: 80%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.25);
 
@@ -69,4 +75,34 @@
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
+}
+
+%btn__favoris {
+    .btn_favoris {
+        bottom: 25px;
+        right: 20px;
+        border: none;
+        color: transparent;
+        background-color: transparent;
+
+        & .card_favori {
+            font-size: 1.5rem;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: $color__txt--black;
+            transition: all 0.25s;
+
+            &:hover {
+                background-image: #df6fdc;
+                background-image: -webkit-linear-gradient(39deg, $color__secondaire 0%, $color__primaire 100%);
+                background-image: linear-gradient(39deg, $color__secondaire 0%, $color__primaire 100%);
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: white;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                transform: scale(1.1);
+            }
+        }
+    }
 }

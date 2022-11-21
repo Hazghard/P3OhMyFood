@@ -1,0 +1,80 @@
+.modale__container {
+
+    width: 100%;
+    height: 100vh;
+    padding-top: 48%;
+    position: fixed;
+
+    background: linear-gradient(295deg, darken($color__primaire, 95%), darken($color__secondaire, 65%));
+    box-shadow: inset 0px 0px 500px 100px rgba(0, 0, 0, 0.8);
+    z-index: 9000;
+
+
+    // PRELOADER VISIBILITY
+    visibility: hidden;
+    opacity: 0;
+    -webkit-animation: fade-out $preloader__fadeout ease-out both;
+    animation: modale__visibility $preloader__fadeout ease-out both;
+    animation-delay: calc($preloader__timer - $preloader__fadeout);
+
+    & .svg-content {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        & text {
+            width: 100%;
+            font-family: 'Shrikhand', sans-serif;
+            animation: stroke $preloader__timer infinite alternate;
+            stroke-width: 1;
+            font-size: 40px;
+
+            @include tablettes {
+                font-size: 80px;
+            }
+
+            @include pc {
+                font-size: 100px;
+            }
+        }
+    }
+}
+
+
+@keyframes stroke {
+    0% {
+        fill: rgba(0, 0, 0, 0);
+        stroke: $color__primaire;
+        stroke-dasharray: 0 50%;
+    }
+
+    80% {
+        fill: rgba(255, 255, 255, 0);
+        stroke: $color__secondaire;
+    }
+
+    100% {
+        fill: $color__tertiaire;
+        stroke: rgba(0, 0, 0, 255);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+    }
+}
+
+@keyframes modale__visibility {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    80% {
+        visibility: visible;
+        opacity: 0.9;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}

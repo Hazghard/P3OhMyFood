@@ -9,11 +9,11 @@
         "fonctionnement"
         "restaurants"
     ;
-
+    @extend %screen_max--center;
 }
 
 //Menu GHrid layout
-.menuPage__main {
+#menuPage__main {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -21,6 +21,8 @@
         "section__photo"
         "section__menu"
     ;
+    @extend %screen_max--center;
+
 }
 
 
@@ -84,16 +86,7 @@
     }
 
     & a {
-        @extend %btn__style--purple--rounded;
-        margin-top: 25px;
-        transition: all 0.4s ease-in-out;
-
-        &:hover {
-            transform: scale(1.05);
-            transform: translate(0, -5px);
-            background-image: linear-gradient(170deg, $color__secondaire 20%, $color__primaire 68%);
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 24px 28px, rgba(0, 0, 0, 0.22) 0px 20px 10px;
-        }
+        padding-top: 20px;
     }
 
     @include pc {
@@ -294,31 +287,102 @@
 
     }
 
-    & .btn_favoris {
+    @extend %btn__favoris;
+
+    .btn_favoris {
         position: absolute;
-        bottom: 25px;
-        right: 20px;
-        border: none;
-
-        & i {
-            font-size: 1.5rem;
-            color: transparent;
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: $color__txt--black;
-            transition: all 0.5s ease-in-out;
-
-            &:hover {
-                // animation: all 1s ease-in-out;
-                color: #df6fdc;
-                color: -webkit-linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
-                color: linear-gradient(39deg, #df6fdc 0%, #be65db 50%, #a45cdc 100%);
-                -webkit-text-stroke-width: 0px;
-            }
-        }
     }
 
     &:hover {
         transform: scale(1.05);
         box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 28px, rgba(0, 0, 0, 0.22) 0px 25px 10px;
+    }
+}
+
+
+// ----------------------------- CSS PAGES MENUS ----------------------------- 
+
+.menuPage__photo {
+    @extend %screen_max--center;
+
+    grid-area: section__photo;
+    display: flex;
+    width: 100%;
+
+    & img {
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        object-fit: cover;
+    }
+}
+
+.menuPage__menu {
+    @extend %screen_max--center;
+    @extend %flex--column;
+
+    grid-area: section__menu;
+    width: 100vw;
+    height: calc(100% + 2rem);
+
+    position: relative;
+    top: -2rem;
+    padding: 0px 15px 0px 15px;
+
+    border-radius: 2rem 2rem 0 0;
+    background-color: $color__grey-white;
+    // @extend %btn__favori;
+
+    & .menuPage__title {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 2rem 0 2rem 0;
+
+        & h1 {
+            font-family: $police_logo_titres;
+            font-weight: 300;
+        }
+
+        @extend %btn__favoris;
+        padding-right: 20px;
+    }
+
+    & .menu__container--btnCommander {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.menu__container--entrees,
+.menu__container--plats,
+.menu__container--desserts {
+    & h2 {
+        font-size: 1.1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3.5px;
+            bottom: 20px;
+            left: 0px;
+            background-color: $color__tertiaire;
+        }
+    }
+
+    & ul {
+        @extend %flex--column;
+        gap: 15px;
+        padding-bottom: 3rem;
+
+        & .entree__li {
+            border-radius: 15px;
+        }
     }
 }

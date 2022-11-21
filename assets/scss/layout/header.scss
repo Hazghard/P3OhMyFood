@@ -17,5 +17,13 @@ header {
     & a {
         position: absolute;
         left: 10%;
+        color: $color__txt--black;
+        font-size: 1.2rem;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            transform: scale(1.3);
+        }
     }
+
 }

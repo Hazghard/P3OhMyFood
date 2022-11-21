@@ -1,7 +1,7 @@
 /* tablettes */
 /* pc */
 /* pc > max-width */
-body {
+.menuPage__menu, .menuPage__photo, #menuPage__main, #landingPage__main {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -23,7 +23,7 @@ footer a, .card_wrapper a .card_wrapper_legende, .section_ul li, .section_locali
 
 footer, .menu__container--entrees ul,
 .menu__container--plats ul,
-.menu__container--desserts ul, .card_wrapper a, .section_restaurants, .section_fonctionnement {
+.menu__container--desserts ul, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctionnement {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -207,6 +207,74 @@ footer, .menu__container--entrees ul,
   transform: scale(100%) rotate(360deg);
 }
 
+.modale__container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 48%;
+  position: fixed;
+  background: linear-gradient(295deg, black, #2d0020);
+  box-shadow: inset 0px 0px 500px 100px rgba(0, 0, 0, 0.8);
+  z-index: 9000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-animation: fade-out 1s ease-out both;
+  animation: modale__visibility 1s ease-out both;
+  animation-delay: 2s;
+}
+.modale__container .svg-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modale__container .svg-content text {
+  width: 100%;
+  font-family: "Shrikhand", sans-serif;
+  animation: stroke 3s infinite alternate;
+  stroke-width: 1;
+  font-size: 40px;
+}
+@media (min-width: 768px) {
+  .modale__container .svg-content text {
+    font-size: 80px;
+  }
+}
+@media (min-width: 1025px) {
+  .modale__container .svg-content text {
+    font-size: 100px;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: #9356DC;
+    stroke-dasharray: 0 50%;
+  }
+  80% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: #FF79DA;
+  }
+  100% {
+    fill: #99E2D0;
+    stroke: rgb(0, 0, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+  }
+}
+@keyframes modale__visibility {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  80% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -527,9 +595,6 @@ header .header_logo {
 
 .menuPage__menu {
   grid-area: section__menu;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
   width: 100vw;
   height: calc(100% + 2rem);
   position: relative;
@@ -598,6 +663,7 @@ footer .footer_logo {
   font-size: 1.25rem;
   font-family: "Shrikhand", Courier, monospace;
   padding-bottom: 15px;
+  z-index: 1;
 }
 footer a {
   width: fit-content;
@@ -637,7 +703,6 @@ footer a:hover:after {
     background: radial-gradient(circle, #9356dc 0%, rgba(255, 121, 218, 0) 70%);
     position: absolute;
     transform: rotate(6deg);
-    z-index: -1000;
     filter: blur(10px);
   }
 }

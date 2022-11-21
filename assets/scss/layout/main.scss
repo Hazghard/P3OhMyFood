@@ -9,7 +9,7 @@
         "fonctionnement"
         "restaurants"
     ;
-
+    @extend %screen_max--center;
 }
 
 //Menu GHrid layout
@@ -21,6 +21,8 @@
         "section__photo"
         "section__menu"
     ;
+    @extend %screen_max--center;
+
 }
 
 
@@ -301,6 +303,8 @@
 // ----------------------------- CSS PAGES MENUS ----------------------------- 
 
 .menuPage__photo {
+    @extend %screen_max--center;
+
     grid-area: section__photo;
     display: flex;
     width: 100%;
@@ -314,10 +318,10 @@
 }
 
 .menuPage__menu {
+    @extend %screen_max--center;
+    @extend %flex--column;
+
     grid-area: section__menu;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     width: 100vw;
     height: calc(100% + 2rem);
 

@@ -13,11 +13,17 @@
 
 
 //  -------------------  BOUTONS MENU PLATS  -------------------  
+
 .entree__li {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F7F7F7;
+
+    opacity: 0;
+    animation: fadeInUp $menuLoading__timer;
+    animation-fill-mode: forwards;
+
 }
 
 .menu_button {

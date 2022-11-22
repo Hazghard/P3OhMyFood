@@ -17,7 +17,10 @@ $color__txt--white: #FFFFFF;
 $police_logo_titres: "Shrikhand", Courier, monospace;
 $police_texte: "Roboto", Courier, monospace;
 
-$screen_max_width: 1400px;
+$screen_max_width: 1200px;
 
 $preloader__timer : 3s;
 $preloader__fadeout: 1s;
+
+$menuLoading__timer : 1s;
+$menuLoading__itemNumber : 10;

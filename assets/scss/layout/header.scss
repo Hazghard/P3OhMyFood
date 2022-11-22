@@ -1,4 +1,5 @@
 header {
+    @extend %screen_max--center;
     @extend %flex__center--column;
     width: 100%;
 
@@ -15,8 +16,8 @@ header {
     @extend %flex--row;
 
     & a {
-        position: absolute;
-        left: 10%;
+        position: relative;
+        left: -20%;
         color: $color__txt--black;
         font-size: 1.2rem;
         transition: all 0.15s ease-in-out;

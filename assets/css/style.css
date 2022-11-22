@@ -771,13 +771,16 @@ footer a:hover:after {
     color: #000000;
   }
   footer::before {
+    background-color: rgba(147, 86, 220, 0.2);
     content: "";
     width: 1000px;
-    height: 250px;
-    background: radial-gradient(circle, #9356dc 0%, rgba(255, 121, 218, 0) 70%);
+    height: 300px;
+    -webkit-mask-image: url(../../../assets/img/logo/brush-stroke-banner-6.svg);
+    mask-image: url(../../../assets/img/logo/brush-stroke-banner-6.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
     position: absolute;
-    transform: rotate(6deg);
-    filter: blur(10px);
-    overflow: hidden;
   }
 }

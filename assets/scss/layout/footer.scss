@@ -45,6 +45,7 @@ footer {
         align-items: center;
         background-color: transparent;
         color: $color__txt--black;
+        padding-top: 50px;
 
         & a {
             color: $color__txt--black;
@@ -52,12 +53,13 @@ footer {
 
         &::before {
             content: "";
-            width: 1200px;
+            width: 1000px;
             height: 250px;
             background: radial-gradient(circle, rgba($color__primaire, 1) 0%, rgba($color__secondaire, 0) 70%);
             position: absolute;
             transform: rotate(6deg);
             filter: blur(10px);
+            overflow: hidden;
         }
 
     }

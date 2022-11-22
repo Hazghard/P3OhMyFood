@@ -322,7 +322,7 @@
     @extend %flex--column;
 
     grid-area: section__menu;
-    width: 100vw;
+    width: 100%;
     height: calc(100% + 2rem);
 
     position: relative;
@@ -377,12 +377,21 @@
     }
 
     & ul {
-        @extend %flex--column;
+        @extend %flex__center--column;
         gap: 15px;
         padding-bottom: 3rem;
 
+        @include tablettes {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+
         & .entree__li {
             border-radius: 15px;
+            width: 100%;
+            max-width: 500px;
         }
     }
 }

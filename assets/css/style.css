@@ -1,13 +1,15 @@
 /* tablettes */
 /* pc */
 /* pc > max-width */
-.menuPage__menu, .menuPage__photo, #menuPage__main, #landingPage__main {
-  max-width: 1400px;
+.menuPage__menu, .menuPage__photo, #menuPage__main, #landingPage__main, header {
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.section_ul, .section_presentation, header {
+.menu__container--entrees ul,
+.menu__container--plats ul,
+.menu__container--desserts ul, .section_ul, .section_presentation, header {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -21,9 +23,7 @@ footer a, .card_wrapper a .card_wrapper_legende, .section_ul li, .section_locali
   flex-wrap: nowrap;
 }
 
-footer, .menu__container--entrees ul,
-.menu__container--plats ul,
-.menu__container--desserts ul, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctionnement {
+footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctionnement {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -283,6 +283,10 @@ footer, .menu__container--entrees ul,
   scroll-behavior: smooth;
 }
 
+body {
+  min-height: 100vh;
+}
+
 /* html {
     line-height: 1.15;
 
@@ -322,8 +326,8 @@ header .header_logo {
 }
 
 .header__menuPage a {
-  position: absolute;
-  left: 10%;
+  position: relative;
+  left: -20%;
   color: #000000;
   font-size: 1.2rem;
   transition: all 0.15s ease-in-out;
@@ -595,7 +599,7 @@ header .header_logo {
 
 .menuPage__menu {
   grid-area: section__menu;
-  width: 100vw;
+  width: 100%;
   height: calc(100% + 2rem);
   position: relative;
   top: -2rem;
@@ -646,10 +650,21 @@ header .header_logo {
   gap: 15px;
   padding-bottom: 3rem;
 }
+@media (min-width: 768px) {
+  .menu__container--entrees ul,
+.menu__container--plats ul,
+.menu__container--desserts ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 .menu__container--entrees ul .entree__li,
 .menu__container--plats ul .entree__li,
 .menu__container--desserts ul .entree__li {
   border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
 }
 
 footer {
@@ -692,17 +707,19 @@ footer a:hover:after {
     align-items: center;
     background-color: transparent;
     color: #000000;
+    padding-top: 50px;
   }
   footer a {
     color: #000000;
   }
   footer::before {
     content: "";
-    width: 1200px;
+    width: 1000px;
     height: 250px;
     background: radial-gradient(circle, #9356dc 0%, rgba(255, 121, 218, 0) 70%);
     position: absolute;
     transform: rotate(6deg);
     filter: blur(10px);
+    overflow: hidden;
   }
 }

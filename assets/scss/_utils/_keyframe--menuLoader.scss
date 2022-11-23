@@ -1,12 +1,12 @@
 @keyframes fadeInUp {
-    0% {
+    70% {
         transform: translateY(25px);
         display: flex;
         visibility: visible;
         opacity: 0;
     }
 
-    50% {
+    80% {
         opacity: 1;
     }
 
@@ -18,6 +18,6 @@
 
 @for $i from 1 through $menuLoading__itemNumber {
     .menu_ul li:nth-child(#{$i}) {
-        animation-delay: calc($preloader__timer + $i * 0.15s);
+        animation-delay: calc($i * 0.15s);
     }
 }

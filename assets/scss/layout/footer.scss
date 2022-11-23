@@ -39,7 +39,6 @@ footer {
         }
     }
 
-
     @include pc {
         justify-content: center;
         align-items: center;
@@ -64,6 +63,5 @@ footer {
             mask-position: center;
             position: absolute;
         }
-
     }
 }

@@ -16,6 +16,8 @@
     -webkit-animation: modale__visibility $preloader__fadeout ease-out both;
     animation: modale__visibility $preloader__fadeout ease-out both;
     animation-delay: calc($preloader__timer - $preloader__fadeout);
+    // animation-fill-mode: forwards;
+
 
     & .svg-content {
 

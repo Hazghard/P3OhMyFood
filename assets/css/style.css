@@ -720,8 +720,12 @@ header .header_logo {
 .menu__container--plats ul .entree__li,
 .menu__container--desserts ul .entree__li {
   border-radius: 15px;
-  width: 100%;
-  max-width: 500px;
+  width: 380px;
+}
+.menu__container--entrees ul .entree__li:hover,
+.menu__container--plats ul .entree__li:hover,
+.menu__container--desserts ul .entree__li:hover {
+  cursor: pointer;
 }
 
 footer {

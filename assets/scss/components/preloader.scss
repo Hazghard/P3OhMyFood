@@ -9,15 +9,12 @@
     box-shadow: inset 0px 0px 500px 100px rgba(0, 0, 0, 0.8);
     z-index: 9000;
 
-
     // PRELOADER VISIBILITY
     visibility: hidden;
     opacity: 0;
     -webkit-animation: modale__visibility $preloader__fadeout ease-out both;
     animation: modale__visibility $preloader__fadeout ease-out both;
     animation-delay: calc($preloader__timer - $preloader__fadeout);
-    // animation-fill-mode: forwards;
-
 
     & .svg-content {
 

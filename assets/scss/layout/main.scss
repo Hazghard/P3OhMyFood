@@ -358,6 +358,7 @@
 .menu__container--entrees,
 .menu__container--plats,
 .menu__container--desserts {
+
     & h2 {
         font-size: 1.1rem;
         font-weight: 300;
@@ -391,8 +392,8 @@
         & .entree__li {
             border-radius: 15px;
             width: 100%;
-            max-width: 380px;
-            // width: 380px;
+            max-width: 360px;
+            // Probleme de scaling sur vrai telephone (pas depuis l'inspecteur)
         }
 
         & .entree__li:hover {

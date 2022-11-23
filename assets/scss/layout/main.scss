@@ -14,7 +14,7 @@
 
 //Menu GHrid layout
 #menuPage__main {
-    width: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -322,7 +322,7 @@
     @extend %flex--column;
 
     grid-area: section__menu;
-    width: 100%;
+    width: 100vw;
     height: calc(100% + 2rem);
 
     position: relative;
@@ -392,8 +392,12 @@
         & .entree__li {
             border-radius: 15px;
             width: 100%;
-            max-width: 360px;
+            // max-width: 360px;
             // Probleme de scaling sur vrai telephone (pas depuis l'inspecteur)
+
+            @include tablettes {
+                max-width: 370px;
+            }
         }
 
         & .entree__li:hover {

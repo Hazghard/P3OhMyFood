@@ -180,7 +180,6 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
 
 .menu_button--description {
   width: 90%;
-  max-width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -720,7 +719,8 @@ header .header_logo {
 .menu__container--plats ul .entree__li,
 .menu__container--desserts ul .entree__li {
   border-radius: 15px;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
 }
 .menu__container--entrees ul .entree__li:hover,
 .menu__container--plats ul .entree__li:hover,

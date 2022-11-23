@@ -22,5 +22,5 @@ $screen_max_width: 1200px;
 $preloader__timer : 3s;
 $preloader__fadeout: 1s;
 
-$menuLoading__timer : 1s;
+$menuLoading__timer : calc($preloader__timer + 1.25s);
 $menuLoading__itemNumber : 10;

@@ -95,17 +95,14 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
 
 @keyframes fadeInUp {
   70% {
-    transform: translateY(25px);
-    display: flex;
-    visibility: visible;
     opacity: 0;
-  }
-  80% {
-    opacity: 1;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
   100% {
-    transform: translateX(0px);
     opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 .menu_ul li:nth-child(1) {
@@ -163,7 +160,6 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
   justify-content: center;
   align-items: center;
   background-color: #F7F7F7;
-  opacity: 1;
   animation: fadeInUp 4.25s;
 }
 

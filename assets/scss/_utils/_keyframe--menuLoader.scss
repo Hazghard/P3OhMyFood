@@ -1,20 +1,17 @@
 @keyframes fadeInUp {
     70% {
-        transform: translateY(25px);
-        display: flex;
-        visibility: visible;
         opacity: 0;
-    }
-
-    80% {
-        opacity: 1;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
     }
 
     100% {
-        transform: translateX(0px);
         opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
+
 
 @for $i from 1 through $menuLoading__itemNumber {
     .menu_ul li:nth-child(#{$i}) {

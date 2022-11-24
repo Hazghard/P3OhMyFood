@@ -162,8 +162,7 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
   background-color: #F7F7F7;
   animation: fadeInUp 4.25s;
 }
-
-.menu_button {
+.entree__li .menu_button {
   display: flex;
   flex-direction: row;
   height: 70px;
@@ -173,8 +172,7 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 14px 28px;
 }
-
-.menu_button--description {
+.entree__li .menu_button .menu_button--description {
   flex-grow: 1;
   flex-shrink: 3;
   height: 100%;
@@ -186,21 +184,18 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.menu_button--title {
+.entree__li .menu_button .menu_button--description .menu_button--title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.menu_button--titlecontent {
+.entree__li .menu_button .menu_button--description .menu_button--titlecontent {
   font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.menu_button--price {
+.entree__li .menu_button .menu_button--price {
   flex: 0 1 auto;
   display: flex;
   align-items: flex-end;
@@ -209,8 +204,7 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
   font-size: 0.9rem;
   font-weight: 700;
 }
-
-.menu_button_add--icon {
+.entree__li .menu_button .menu_button_add--icon {
   width: 0px;
   height: 100%;
   display: flex;
@@ -220,8 +214,7 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
   border-radius: 0px 15px 15px 0px;
   transition: all 1s ease-in-out;
 }
-
-.menu_button_add--icon:before {
+.entree__li .menu_button .menu_button_add--icon .menu_button_add--icon:before {
   content: "";
   width: 24px;
   height: 24px;
@@ -233,8 +226,7 @@ footer, .menuPage__menu, .card_wrapper a, .section_restaurants, .section_fonctio
   border-radius: 50%;
   transition: all 1s ease-in-out;
 }
-
-.menu_button_add--icon:after {
+.entree__li .menu_button .menu_button_add--icon .menu_button_add--icon:after {
   content: "\f00c";
   font: var(--fa-font-solid);
   font-size: 1rem;

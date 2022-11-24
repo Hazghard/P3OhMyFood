@@ -79,7 +79,7 @@
             border-radius: 0px 15px 15px 0px;
             transition: all 1s ease-in-out;
 
-            & .menu_button_add--icon:before {
+            &:before {
                 content: "";
                 width: 24px;
                 height: 24px;
@@ -92,7 +92,7 @@
                 transition: all 1s ease-in-out;
             }
 
-            & .menu_button_add--icon:after {
+            &:after {
                 content: "\f00c";
                 font: var(--fa-font-solid);
                 font-size: 1rem;
@@ -115,9 +115,9 @@
 }
 
 .menu_button:hover .menu_button_add--icon:before {
-    transform: scale(100%);
+    transform: scale(1);
 }
 
 .menu_button:hover .menu_button_add--icon:after {
-    transform: scale(100%) rotate(360deg);
+    transform: scale(1) rotate(360deg);
 }
